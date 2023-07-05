@@ -18,7 +18,7 @@
 	height: 260px;
 	margin: 10px 0px 10px 00px;
 	text-overflow: ellipsis;
-	justify-content: end;
+	/* justify-content: end; */
 }
 
 .name {
