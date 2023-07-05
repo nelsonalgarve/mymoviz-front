@@ -63,7 +63,7 @@ function Home() {
   const movies = movieList.map((data) => {
     const isLiked = likedMovies.some(movie => movie === data.title);
     const image = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
-    if (data.overview.length > 25 ) { data.overview = data.overview.substring(0, 255) + '...' }
+    if (data.overview.length > 255 ) { data.overview = data.overview.substring(0, 255) + '...' }
     return <Movie key={data.id} updateLikedMovies={updateLikedMovies} isLiked={isLiked} title={data.title} overview={data.overview} poster={image} voteAverage={data.vote_average} voteCount={data.vote_count} />;
   });
 
